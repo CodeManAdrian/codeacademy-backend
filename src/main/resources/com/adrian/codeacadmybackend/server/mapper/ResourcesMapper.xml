@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.adrian.codeacademybackend.server.mapper.ResourcesMapper">
+
+    <resultMap id="BaseResultMap" type="com.adrian.codeacademybackend.model.entity.Resources">
+            <id property="resourcesId" column="resources_id" jdbcType="BIGINT"/>
+            <result property="account" column="account" jdbcType="BIGINT"/>
+            <result property="title" column="title" jdbcType="VARCHAR"/>
+            <result property="link" column="link" jdbcType="VARCHAR"/>
+            <result property="description" column="description" jdbcType="VARCHAR"/>
+            <result property="isVipAccessible" column="is_vip_accessible" jdbcType="TINYINT"/>
+            <result property="isVisible" column="is_visible" jdbcType="TINYINT"/>
+            <result property="createdAt" column="created_at" jdbcType="TIMESTAMP"/>
+            <result property="updatedAt" column="updated_at" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        resources_id,account,title,
+        link,description,is_vip_accessible,
+        is_visible,created_at,updated_at
+    </sql>
+</mapper>
